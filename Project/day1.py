@@ -36,3 +36,17 @@ def get_food(food_name : FoodEnum):
             "food_name":food_name, "message" : "fruits is good for your health"
         }
     return{ "food_name":food_name, "message": "I like diary products"}
+
+#another que
+fake_db = [{"item_name": "zoho"}, {"item_name": "bar"}, {"item_name": "jazz"}, {"item_name": "star"}]
+
+@app.get("/items")
+def list_items(skip: int=0, limit: int = 10):
+    return fake_db[skip: skip+limit]
+
+#nxt que
+@app.get("/items/{item_id}")
+def get_item49(item_id : str, q: str | None = None):
+    if q:
+        return{"item_id":item_id, "q":q}
+    return{"item_id" : item_id}
