@@ -1,9 +1,9 @@
-from fastapi import FastAPI,Query,Path, Body
+""" from fastapi import FastAPI,Query,Path, Body
 from pydantic import BaseModel,Field,EmailStr
 from typing import Optional
 
 app = FastAPI()
-
+ """
 """ 
 @app.get("/items/{item_id}")
 def get_item(item_id: str, q:str | None = None):
@@ -249,12 +249,12 @@ def item210(item: Itempurch):
 # Emailstr --> for to validate email
 #import Emailstr
 
-class User(BaseModel):
+""" class User(BaseModel):
     email : EmailStr
 
 @app.post("/users")
 def user12(user1 : User):
-    return {"email" : user1.email}
+    return {"email" : user1.email} """
 
 """ 
 class User(BaseModel):
@@ -265,5 +265,18 @@ class User(BaseModel):
 async def create_user(user: User):
     return {"name": user.name, "email": user.email} """
 
+""" from fastapi import FastAPI,Cookie, Header
+
+app = FastAPI()
+
+@app.get("/get-cookies")
+@app.get("/get-cookies")
+def get_cookie(user_id : str = Cookie(default=None)):
+      return {"user_id" : user_id }
+
+@app.get("/get-header")
+def get_header(user_agent : str = Header(default=None),
+               custom_header : str = Header(alias="x-custom-header",default=None)):
+      return {"user_agent" : user_agent, "custom header" : custom_header} """
 
 
