@@ -1,11 +1,11 @@
 # crud operation main  file
 
-"""from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session
 from fastapi import HTTPException, Depends
 
-from schemas import Config
-from . import crud,models,schemas
-from models import models
+#from schemas import Config
+import crud,models,schemas
+#from models import models
 from database import get_db
 from fastapi import FastAPI
 
@@ -35,7 +35,7 @@ def read_student(student_id: int, db: Session = Depends(get_db)):
 # Delete a student ---by ID
 @app.delete("/students/{student_id}", response_model=schemas.Student)
 def delete_student(student_id : int, db: Session = Depends(get_db)):
-    return crud.delete_student(db = db, student_id = student_id) """
+    return crud.delete_student(db = db, student_id = student_id) 
 
 # JWT-AUTHORIZATION AND AUTHENTICATION
 
@@ -141,7 +141,7 @@ def  read_root():
 
 
 # CROS HANDLING
-from fastapi import FastAPI
+"""from fastapi import FastAPI
 #from starlette.middleware.base import BaseHTTPMiddleware
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -163,4 +163,4 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
-    return {"message" : "CROS - ENDPOINT ENABLED! "}
+    return {"message" : "CROS - ENDPOINT ENABLED! "}"""
