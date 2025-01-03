@@ -1,6 +1,6 @@
 # crud operation main  file
 
-from sqlalchemy.orm import Session
+"""from sqlalchemy.orm import Session
 from fastapi import HTTPException, Depends
 
 #from schemas import Config
@@ -35,7 +35,7 @@ def read_student(student_id: int, db: Session = Depends(get_db)):
 # Delete a student ---by ID
 @app.delete("/students/{student_id}", response_model=schemas.Student)
 def delete_student(student_id : int, db: Session = Depends(get_db)):
-    return crud.delete_student(db = db, student_id = student_id) 
+    return crud.delete_student(db = db, student_id = student_id) """
 
 # JWT-AUTHORIZATION AND AUTHENTICATION
 
