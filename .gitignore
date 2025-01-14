@@ -1,0 +1,4 @@
+.env
+tapi-env/
+__pycache__/
+*.pyc
